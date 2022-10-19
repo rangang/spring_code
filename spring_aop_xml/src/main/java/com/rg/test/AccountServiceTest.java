@@ -1,0 +1,30 @@
+package com.rg.test;
+
+import com.rg.service.AccountService;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+/**
+ * @BelongsProject: spring_aop_xml
+ * @Author: RG
+ * @CreateTime: 2022/10/18 7:48 下午
+ * @Description:
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({"classpath:applicationContext.xml"})
+public class AccountServiceTest {
+
+    @Autowired
+    private AccountService accountService;
+
+    @Test
+    public void testTransfer() {
+
+        accountService.transfer();
+
+    }
+
+}
